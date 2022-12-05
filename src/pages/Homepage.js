@@ -115,54 +115,11 @@ const Homepage = () => {
         <div>
         <Navbar/>
         <Banner/>
-        <MegaContainer>
-        <FilterandProducts>
-        <FilterContainer>
-            <SortFiltContainer>
-                <FilterText>
-                    Filter products
-                </FilterText>
-                <FilterSelect name= "genre" onChange={handleGenreFilter}>
-                    <FilterOption disabled selected>
-                        Genre
-                    </FilterOption>
-                    <FilterOption>All</FilterOption>
-                    <FilterOption>Ambient</FilterOption>
-                    <FilterOption>Bass</FilterOption>
-                    <FilterOption>HipHop</FilterOption>
-                    <FilterOption>Punk</FilterOption>
-                    <FilterOption>Techno</FilterOption>
-                    <FilterOption>World</FilterOption>
-                    
-                </FilterSelect>
-                <FilterSelect name= "size" onChange={handleSizeFilter}>
-                    <FilterOption disabled selected>
-                        Size
-                    </FilterOption>
-                    <FilterOption>All</FilterOption>
-                    <FilterOption>10-inch</FilterOption>
-                    <FilterOption>12-inch</FilterOption>
-                </FilterSelect>
-            </SortFiltContainer>
-            <SortFiltContainer>
-                <FilterText>
-                    Sort products
-                </FilterText>
-                <FilterSelect onChange={(e) => setSort(e.target.value)}>
-                    <FilterOption value="newest">Newest</FilterOption>
-                    <FilterOption value="plh">Price: Low to High</FilterOption>
-                    <FilterOption value="phl">Price: High to Low</FilterOption>
-                </FilterSelect>
-            </SortFiltContainer>
-        </FilterContainer>
         <Container>
             {data.map((item) => (
                 <Product onAdd={onAdd} cartItems={cartItems} item={item} key={item.title} />
             ))}
         </Container>
-        </FilterandProducts>
-        <CartCompo onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}/>
-        </MegaContainer>
         <Footer/>
         </div>
     )

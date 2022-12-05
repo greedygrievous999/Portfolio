@@ -62,10 +62,10 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>MOHAWK RECORDS</Logo>
+          <Logo>JACKSON DELEA</Logo>
         </Center>
         <Right>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem>Contact</MenuItem>
           <MenuItem><ShoppingCart/></MenuItem>
         </Right>
       </Wrapper>
