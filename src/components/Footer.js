@@ -3,10 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    flex: 1;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+
+    padding: 30px;
 `
 const Column = styled.div`
     flex: 1;
@@ -53,51 +52,7 @@ const Right = styled.div`
 const Footer = () => {
   return (
     <Container> 
-        <Column>
-            <Logo>SOCIALS</Logo>
-            <Desc>
-                Follow us here 
-            </Desc>
-            <SocialContainer>
-                <SocialIcon>
-                    <Facebook/>
-                </SocialIcon>
-                <SocialIcon>
-                    <Instagram/>
-                </SocialIcon>
-                <SocialIcon>
-                    <Twitter/>
-                </SocialIcon>
-            </SocialContainer>
-        </Column>
-        <Column>
-            <Logo>
-                SHIPPING
-            </Logo>
-            <Link>
-                20 Swan Street 
-            </Link>
-            <Link>
-                Manchester
-            </Link>
-            <Link>
-                M4 5JW
-            </Link>
-        </Column>
-        <Column>
-            <Logo>
-                CONTACT
-            </Logo>
-            <Link>
-                Contact Form 
-            </Link>
-            <Link>
-                1618322565 
-            </Link>
-            <Link>
-                help@mohawkrecords.com
-            </Link>
-        </Column>
+        Built on React
     </Container>
   )
 }

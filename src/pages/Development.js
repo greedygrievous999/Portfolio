@@ -1,5 +1,7 @@
+import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const Container = styled.div`
   padding: 20px;
@@ -43,7 +45,7 @@ const Project = () => {
   return (
     <Container>
       <Introduction>
-        <Title>Personas</Title>
+        <Title>Development</Title>
         <Desc>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at

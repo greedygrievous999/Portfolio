@@ -1,6 +1,7 @@
 import { Search, ShoppingCart } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+import {BrowserRouter, Route, Link } from 'react-router-dom'
 
 const Container = styled.div`
   height: 100px;
@@ -25,27 +26,13 @@ const Right = styled.div`
   justify-content: flex-end;
 `
 
-const Language = styled.span`
-  font-size: 60;
-  cursor: pointer;
-`
-const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-`
-const Input = styled.input`
-  border: none;
-`
-
 const Logo = styled.h1`
   font-weight: bold;
 `
-const MenuItem = styled.div`
+const MenuItem = styled.li`
   font-size: 14px;
   cursor: pointer;
-  margin-left: 25px;
+  margin-left: 20px;
 `
 
 const Navbar = () => {
@@ -53,11 +40,26 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Logo>JACKSON DELEA</Logo>
+            <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <Logo>JACKSON DELEA</Logo>
+            </Link>
         </Left>
         <Right>
-          <MenuItem>Contact</MenuItem>
-          <MenuItem>About</MenuItem>
+          <Link to="/personas" style={{ textDecoration: 'none', color: 'inherit'}}>
+            <MenuItem>Personas</MenuItem>
+          </Link>
+          <Link to="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <MenuItem>Responsive Redesign</MenuItem>
+          </Link>
+          <Link to="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <MenuItem>Iterative Design</MenuItem>
+          </Link>
+          <Link to="/development" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <MenuItem>Development</MenuItem>
+          </Link>
+          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>
+              <MenuItem>About</MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>

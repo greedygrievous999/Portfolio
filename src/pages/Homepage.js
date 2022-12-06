@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import {Routes, Route, useNavigate, Link} from 'react-router-dom'
+import Personas from './Personas'
 
 const NavbarStickyWrapper = styled.div`
     position: sticky;
@@ -30,7 +31,7 @@ const HoverAction = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     cursor: pointer;
 `
 const ImageContainer = styled.div`
@@ -97,10 +98,8 @@ const Description = styled.span`
 const Homepage = () => {
     return (
         <div>
-        <NavbarStickyWrapper>
-            <Navbar/>
-        </NavbarStickyWrapper>
         <ProjectsContainer>
+            
             <ImageContainer>
                 <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
                 <HoverAction>     
@@ -110,9 +109,14 @@ const Homepage = () => {
                     <TextInfo>
                         <Description>Desc1</Description>
                     </TextInfo>
-                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                    <ReadMoreButton>
+                    <Link to ="/personas" style={{ textDecoration: 'none', color: 'inherit'}}> 
+                        READ MORE
+                    </Link>
+                    </ReadMoreButton>
                 </HoverAction>
             </ImageContainer>
+
             <ImageContainer>
                 <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
                 <HoverAction>     
@@ -120,11 +124,16 @@ const Homepage = () => {
                         <Title>Responsive</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description> desc1 </Description>
+                        <Description>Desc1</Description>
                     </TextInfo>
-                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                    <ReadMoreButton>
+                    <Link to ="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>
+                        READ MORE
+                    </Link>
+                    </ReadMoreButton>
                 </HoverAction>
             </ImageContainer>
+
             <ImageContainer>
                 <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
                 <HoverAction>     
@@ -132,11 +141,16 @@ const Homepage = () => {
                         <Title>Iterative</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc</Description>
+                        <Description>Desc1</Description>
                     </TextInfo>
-                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                    <ReadMoreButton>
+                        <Link to ="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>
+                        READ MORE
+                        </Link>
+                    </ReadMoreButton>
                 </HoverAction>
             </ImageContainer>
+
             <ImageContainer>
                 <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
                 <HoverAction>     
@@ -144,11 +158,16 @@ const Homepage = () => {
                         <Title>Development</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc</Description>
+                        <Description>Desc1</Description>
                     </TextInfo>
-                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                    <ReadMoreButton>
+                        <Link to ="/development" style={{ textDecoration: 'none', color: 'inherit'}}>
+                        READ MORE
+                        </Link>
+                    </ReadMoreButton>
                 </HoverAction>
             </ImageContainer>
+            
         </ProjectsContainer>
         <Footer/>
         </div>
