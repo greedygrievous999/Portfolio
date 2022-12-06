@@ -2,124 +2,154 @@ import React from 'react'
 import styled from 'styled-components';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useState } from 'react';
-import CartCompo from '../components/CartCompo';
-import Product from '../components/Product'
-import { popularProducts } from '../data'
-import { useEffect } from 'react';
-import Banner from '../components/Banner';
+import { Link } from 'react-router-dom';
 
-const MegaContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+const NavbarStickyWrapper = styled.div`
+    position: sticky;
+    top: 0;
+    z-index: 1;
 `
-
-const FilterandProducts = styled.div`
-`
-
-const FilterContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-`
-const SortFiltContainer = styled.div`
-    margin: 20px;
-`
-const FilterText = styled.span`
-    font-style: 20px;
-    font-weight: 600;
-`
-const FilterSelect = styled.select`
-    margin-left: 10px;
-    min-width: 100px;
-`
-const FilterOption = styled.option`
-    margin-left: 10px;
-    min-width: 100px;
-`
-const Container = styled.div`
+const ProjectsContainer = styled.div`
+    z-index: 2;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 `
+const HoverAction = styled.div`
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+`
+const ImageContainer = styled.div`
+    flex: 1;
+    margin: 25px;
+    min-width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkgrey;
+    position: relative;
+
+    &:hover ${HoverAction}{
+        opacity: 1;
+    }
+`
+const Image = styled.img`
+    height: 80%;
+    z-index: 2;
+`
+const ReadMoreButton = styled.button`
+    width: 30%;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: 3px;
+    border-color: coral;
+    transition: all 0.5s ease;
+
+    &:hover{
+        background-color: lightcoral;
+        color: white;
+        transform: scale(1.3);
+
+    }
+    &:checked{
+        background-color: white;
+        transform: scale(0.9);  
+    }
+`
+const TextInfo = styled.div`
+    display: flex;
+    flex: wrap;
+    margin: 5px;
+    color: white;
+    transition: all 0.5s ease;
+`
+const Title = styled.span`
+    font-weight: 400;
+    font-size: 24px;
+`
+const Description = styled.span`
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+`
 
 const Homepage = () => {
-    const [genreFilter, setGenreFilter] = useState('')
-    const [sizeFilter, setSizeFilter] = useState('')
-    const [sort, setSort] = useState("newest")
-    const [cartItems, setCartItems] = useState([]);
-    let [data, setData] = useState([]);
-
-    const handleGenreFilter = (e) =>{
-        setGenreFilter(e.target.value);
-    }
-
-    const handleSizeFilter = (e) =>{
-        setSizeFilter(e.target.value);
-    }
-
-    useEffect(() => {
-        const genreFiltered = popularProducts.filter(product => genreFilter.length === 0 || product.genre === genreFilter.toLowerCase() || genreFilter === 'All');
-        const sizeFiltered = genreFiltered.filter(product => sizeFilter.length === 0 || product.size === sizeFilter.toLowerCase() || sizeFilter === 'All');
-        setData(sizeFiltered);
-            }, 
-    [genreFilter, sizeFilter]);
-
-    useEffect(() => {
-        if ((sort === "newest")) {
-            setData((prev) =>
-                [...prev].sort((a,b) => a.daysinstock - b.daysinstock)
-            );
-        }
-        else if ((sort === "plh")) {
-            setData((prev) =>
-                [...prev].sort((a,b) => a.price - b.price)
-            );
-        }
-        else if ((sort === "phl")) {
-            setData((prev) =>
-                [...prev].sort((a,b) => b.price - a.price)
-            );
-        }
-    }, [sort]);
-
-    const onAdd = (item) => {
-        const exist = cartItems.find(x => x.title === item.title);
-        if(exist) {
-            setCartItems(
-                cartItems.map((x) => 
-                x.title === item.title ? {...exist, qty: exist.qty +1} : x 
-                )
-            );
-        } else {
-            setCartItems([...cartItems, {...item, qty: 1}])
-        }
-    };
-
-    const onRemove = (item) => {
-        const exist = cartItems.find((x) => x.title === item.title);
-        if(exist.qty === 1){
-            setCartItems(cartItems.filter((x) => x.title !== item.title));
-        } else {
-            setCartItems(
-                cartItems.map((x) => 
-                x.title === item.title ? {...exist, qty: exist.qty -1} : x 
-                )
-            );
-        }
-    }
-
     return (
         <div>
-        <Navbar/>
-        <Banner/>
-        <Container>
-            {data.map((item) => (
-                <Product onAdd={onAdd} cartItems={cartItems} item={item} key={item.title} />
-            ))}
-        </Container>
+        <NavbarStickyWrapper>
+            <Navbar/>
+        </NavbarStickyWrapper>
+        <ProjectsContainer>
+            <ImageContainer>
+                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <HoverAction>     
+                    <TextInfo>
+                        <Title>Personas</Title>
+                    </TextInfo>
+                    <TextInfo>
+                        <Description>Desc1</Description>
+                    </TextInfo>
+                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                </HoverAction>
+            </ImageContainer>
+            <ImageContainer>
+                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <HoverAction>     
+                    <TextInfo>
+                        <Title>Responsive</Title>
+                    </TextInfo>
+                    <TextInfo>
+                        <Description> desc1 </Description>
+                    </TextInfo>
+                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                </HoverAction>
+            </ImageContainer>
+            <ImageContainer>
+                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <HoverAction>     
+                    <TextInfo>
+                        <Title>Iterative</Title>
+                    </TextInfo>
+                    <TextInfo>
+                        <Description>Desc</Description>
+                    </TextInfo>
+                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                </HoverAction>
+            </ImageContainer>
+            <ImageContainer>
+                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <HoverAction>     
+                    <TextInfo>
+                        <Title>Development</Title>
+                    </TextInfo>
+                    <TextInfo>
+                        <Description>Desc</Description>
+                    </TextInfo>
+                    <ReadMoreButton>READ MORE</ReadMoreButton>
+                </HoverAction>
+            </ImageContainer>
+        </ProjectsContainer>
         <Footer/>
         </div>
     )

@@ -3,10 +3,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
+  height: 100px;
   height: 60px;
+  background-color: white;
 `
 const Wrapper =  styled.div`
-  padding: 10px 20px;
+  padding: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,10 +17,6 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-`
-const Center = styled.div`
-  flex: 1;
-  text-align: center;
 `
 const Right = styled.div`
   flex: 1;
@@ -55,18 +53,11 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input/>
-            <Search style={{color:"gray", fontSize: 16}}/>
-          </SearchContainer>
-        </Left>
-        <Center>
           <Logo>JACKSON DELEA</Logo>
-        </Center>
+        </Left>
         <Right>
           <MenuItem>Contact</MenuItem>
-          <MenuItem><ShoppingCart/></MenuItem>
+          <MenuItem>About</MenuItem>
         </Right>
       </Wrapper>
     </Container>

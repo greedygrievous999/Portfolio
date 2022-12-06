@@ -8,7 +8,7 @@ const HoverAction = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
     z-index: 4;
     display: flex;
     flex-direction: column;
@@ -17,15 +17,6 @@ const HoverAction = styled.div`
     transition: all 0.5s ease;
     cursor: pointer;
 `
-
-const TitleContainer = styled.h1`
-    align-self: flex-start;
-    justify-self: left;
-    padding: 20px;
-    position: absolute;
-    z-index: 3;
-`
-
 const ImageContainer = styled.div`
     flex: 1;
     margin: 25px;
@@ -45,7 +36,7 @@ const Image = styled.img`
     height: 80%;
     z-index: 2;
 `
-const AddtoCartButton = styled.button`
+const ReadMoreButton = styled.button`
     width: 30%;
     padding: 5px;
     background-color: white;
@@ -73,23 +64,18 @@ const AddtoCartButton = styled.button`
 const TextInfo = styled.div`
     display: flex;
     flex: wrap;
-    margin: 2px;
+    margin: 5px;
     color: white;
     transition: all 0.5s ease;
-
-    &:hover{
-        background-color: lightcoral;
-        transform: scale(1.3);
-    }
 `
 const Title = styled.span`
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
 `
-
-const GenreSize = styled.span`
-    font-weight: 500;
-    font-size: 14px;
+const Description = styled.span`
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
 `
 
 const Product = (props) => {
@@ -104,9 +90,9 @@ const Product = (props) => {
                     <Title>{item.title.toUpperCase()}</Title>
                 </TextInfo>
                 <TextInfo>
-                    <GenreSize> {item.genre.toUpperCase()} / {item.size.toUpperCase()} </GenreSize>
+                    <Description> {item.description} </Description>
                 </TextInfo>
-                <AddtoCartButton onClick={()=>onAdd(item)}>READ MORE</AddtoCartButton>
+                <ReadMoreButton onClick={()=>onAdd(item)}>READ MORE</ReadMoreButton>
             </HoverAction>
         </ImageContainer>
     )
