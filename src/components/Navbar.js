@@ -1,4 +1,3 @@
-import { Search, ShoppingCart } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 import {BrowserRouter, Route, Link } from 'react-router-dom'
@@ -41,7 +40,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <Logo>GREEDYGRIEVOUS999</Logo>
+              <Logo>Jackson Delea</Logo>
             </Link>
         </Left>
         <Right>

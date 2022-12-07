@@ -104,7 +104,7 @@ const Homepage = () => {
     return (
         <div>
         <Introduction>
-            <Description>is a web designer based in Providence, Rhode Island. His work engages with tactility, interplays of analog and digital, and internet history to create sleek designs for creatives. Take a look at some of his projects below:</Description>
+            <Description>is a web designer based in Providence, Rhode Island. His work engages with this, and that, and this that so that he can do this that. Take a look at some of his projects below:</Description>
         </Introduction>
         <ProjectsContainer>
 
