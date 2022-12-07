@@ -32,7 +32,7 @@ const Logo = styled.h1`
 const MenuItem = styled.li`
   font-size: 14px;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 15px;
 `
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <Logo>JACKSON DELEA</Logo>
+              <Logo>GREEDYGRIEVOUS999</Logo>
             </Link>
         </Left>
         <Right>

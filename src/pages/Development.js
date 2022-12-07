@@ -18,7 +18,6 @@ const Wrapper = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  flex: 1;
 `;
 
 const Image = styled.img`
@@ -39,6 +38,10 @@ const Title = styled.h1`
 const Desc = styled.p`
   margin: 20px 0px;
 `;
+const Header = styled.h2`
+  padding-left: 60px;
+  font-weight: 200;
+`;
 
 
 const Project = () => {
@@ -47,54 +50,23 @@ const Project = () => {
       <Introduction>
         <Title>Development</Title>
         <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+        I set out to redesign redesign the website for Clone, a Rotterdam-based record store, to better match their web design with the feel of their products.
         </Desc>
       </Introduction>
-      <Wrapper>
-        <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
-        </ImgContainer>
-        <InfoContainer>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </Desc>
-        </InfoContainer>
-      </Wrapper>
+      <Header>Why Clone?</Header>
       <Wrapper>
         <InfoContainer>
           <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+          Clone is one of my favorite record stores for dance music. The shop stocks lots of exciting techno and trance records, but their website has always made browsing their catalog quite difficult for me. The two-column design is quite dense, and the organization of browsing categories isn’t the most intuitive.
+
+On top of the organizational issues, I found that the dated stylizations of the site fail to capture their forward-thinking music catalog and sensibility. 
+
+Here you can see the site’s homepage. Below, I’ll list out the primary issues with the site. 
           </Desc>
         </InfoContainer>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image src="https://i.imgur.com/7cp18fM.png"/>
         </ImgContainer>
-      </Wrapper>
-      <Wrapper>
-        <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
-        </ImgContainer>
-        <InfoContainer>
-          <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
-          </Desc>
-        </InfoContainer>
       </Wrapper>
     <Footer></Footer>
     </Container>

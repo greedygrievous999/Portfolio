@@ -1,15 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import {Routes, Route, useNavigate, Link} from 'react-router-dom'
 import Personas from './Personas'
 
-const NavbarStickyWrapper = styled.div`
-    position: sticky;
-    top: 0;
-    z-index: 1;
-`
 const ProjectsContainer = styled.div`
     z-index: 2;
     padding: 20px;
@@ -37,12 +31,14 @@ const HoverAction = styled.div`
 const ImageContainer = styled.div`
     flex: 1;
     margin: 25px;
-    min-width: 600px;
-    height: 300px;
+    min-width: 75vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: darkgrey;
+    background-color: whitesmoke;
+    border: 1px;
+    border-color: black;
     position: relative;
 
     &:hover ${HoverAction}{
@@ -83,7 +79,6 @@ const TextInfo = styled.div`
     flex: wrap;
     margin: 5px;
     color: white;
-    transition: all 0.5s ease;
 `
 const Title = styled.span`
     font-weight: 400;
@@ -95,19 +90,32 @@ const Description = styled.span`
     text-align: center;
 `
 
+
+const Header = styled.h1`
+    font-weight: 200;
+`
+const Introduction = styled.div`
+    flex: 1;
+    padding-left: 30px;
+    padding-top: 30px;
+`
+
 const Homepage = () => {
     return (
         <div>
+        <Introduction>
+            <Description>is a web designer based in Providence, Rhode Island. His work engages with tactility, interplays of analog and digital, and internet history to create sleek designs for creatives. Take a look at some of his projects below:</Description>
+        </Introduction>
         <ProjectsContainer>
-            
+
             <ImageContainer>
-                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <Image src="https://storage.googleapis.com/uxfolio/633b6ad21d43db0003adbb62/633b7d0c1d43db0003adbb99/xiQdq2LYhjN3Ovbu.png"/>
                 <HoverAction>     
                     <TextInfo>
                         <Title>Personas</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc1</Description>
+                        <Description>User research project identifying different personas interacting with a vending machine interface</Description>
                     </TextInfo>
                     <ReadMoreButton>
                     <Link to ="/personas" style={{ textDecoration: 'none', color: 'inherit'}}> 
@@ -118,13 +126,13 @@ const Homepage = () => {
             </ImageContainer>
 
             <ImageContainer>
-                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <Image src="https://i.imgur.com/42c5wMz.png"/>
                 <HoverAction>     
                     <TextInfo>
-                        <Title>Responsive</Title>
+                        <Title>Responsive Redesign</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc1</Description>
+                        <Description>Responsive, modernized front-end redesign for record shopping e-commerce page</Description>
                     </TextInfo>
                     <ReadMoreButton>
                     <Link to ="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>
@@ -135,13 +143,13 @@ const Homepage = () => {
             </ImageContainer>
 
             <ImageContainer>
-                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <Image src="https://i.imgur.com/FjZxLlw.png"/>
                 <HoverAction>     
                     <TextInfo>
-                        <Title>Iterative</Title>
+                        <Title>Iterative Design</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc1</Description>
+                        <Description>Sequential interface design for AI-assisted search engine</Description>
                     </TextInfo>
                     <ReadMoreButton>
                         <Link to ="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>
@@ -152,13 +160,13 @@ const Homepage = () => {
             </ImageContainer>
 
             <ImageContainer>
-                <Image src="https://assets.boomkat.com/spree/products/820278/product/0840200512596.jpg"/>
+                <Image src="https://i.imgur.com/HfLW1u1.png"/>
                 <HoverAction>     
                     <TextInfo>
                         <Title>Development</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Desc1</Description>
+                        <Description>Front-end design for record shopping interface with sorting, filtering and cart functionality</Description>
                     </TextInfo>
                     <ReadMoreButton>
                         <Link to ="/development" style={{ textDecoration: 'none', color: 'inherit'}}>
@@ -167,7 +175,7 @@ const Homepage = () => {
                     </ReadMoreButton>
                 </HoverAction>
             </ImageContainer>
-            
+
         </ProjectsContainer>
         <Footer/>
         </div>
