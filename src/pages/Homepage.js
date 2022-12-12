@@ -31,8 +31,8 @@ const HoverAction = styled.div`
 const ImageContainer = styled.div`
     flex: 1;
     margin: 25px;
-    min-width: 75vh;
-    height: 50vh;
+    min-width: 65vh;
+    height: 65vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,9 @@ const ImageContainer = styled.div`
     }
 `
 const Image = styled.img`
-    height: 80%;
+    max-height: 80%;
+    min-width: 80%;
+    max-width: 90%;
     z-index: 2;
 `
 const ReadMoreButton = styled.button`
