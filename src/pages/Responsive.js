@@ -1,4 +1,3 @@
-import { Info } from "@material-ui/icons";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 
