@@ -89,7 +89,7 @@ const Project = () => {
         <InfoContainer>
           <Desc>
             I initially designed my site to be full-stack enabled, fetching data from a MongoDB API. However, I ran into some issues
-            and decided to pivot to strictly front-end functionality. 
+            and decided to pivot to strictly front-end functionality. To see the program in detail, you can check out the repository <a href="https://github.com/greedygrievous999/Development">here</a>. 
           </Desc>
           <Desc>
             Filtering and sorting:
@@ -111,22 +111,27 @@ const Project = () => {
               Upon checking a certain filter in the interface, the landing page filters the displayed data accordingly. 
             </Desc>
           </InfoContainer>
-          <Desc>
+          <Header>
             Add to cart:
-          </Desc>
-          <InfoContainer>
-            <Desc>
-              I implemented add-to-cart functionality by using State to add data elements to a cart array, which gets fetched in the cart component
-              at the bottom of the landing page. 
-            </Desc>
-            <Desc>
-              The cart component displays the relevant details, and allows users to increase and decrease the quantity of a given item
-            </Desc>
-            <Desc>
-              The right side of the cart component sums the prices of the elements in the cart array before adding a calculated tax and shipping.
-              Cart totals over $100 yield free shipping. 
-            </Desc>
-          </InfoContainer>
+          </Header>
+          <Wrapper>
+            <ImgContainer>
+              <Image src="https://i.imgur.com/HNHVkkG_d.jpg?maxwidth=4000&shape=thumb&fidelity=high"/>
+            </ImgContainer>
+            <InfoContainer>
+              <Desc>
+                I implemented add-to-cart functionality by using State to add data elements to a cart array, which gets fetched in the cart component
+                at the bottom of the landing page. 
+              </Desc>
+              <Desc>
+                The cart component displays the relevant details, and allows users to increase and decrease the quantity of a given item
+              </Desc>
+              <Desc>
+                The right side of the cart component sums the prices of the elements in the cart array before adding a calculated tax and shipping.
+                Cart totals over $100 yield free shipping. 
+              </Desc>
+            </InfoContainer>
+          </Wrapper>
         </InfoContainer>
       </Wrapper>
       <Header>Reflection</Header>
