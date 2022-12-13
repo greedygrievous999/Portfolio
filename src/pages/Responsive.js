@@ -80,7 +80,7 @@ const Project = () => {
           The two-column design is quite dense, and the organization of browsing categories isn’t the most intuitive. On top of the organizational issues, I found that the dated stylizations of the site fail to capture their forward-thinking music catalog and sensibility.
           </Desc>
           <Desc>
-          Here you can see the site’s homepage. Below, I’ll list out the primary issues with the site.
+          You can see a screengrab of Clone's desktop interface, or you can check out the site in full <a href="https://clone.nl/">here</a>. Below, I’ll list out the primary issues with the site.
           </Desc>
         </InfoContainer>
         <ImgContainer>
@@ -98,7 +98,7 @@ const Project = () => {
             The learning curve for new users is quite steep. 
           </Desc>
           <Subhead>Memorability</Subhead>
-          <Desc>The site's design is quite standard. Despite the occassional use of logos and the signature green color profile, the site seems quite generic, despite the store's very unique selections.</Desc>
+          <Desc>The site's design is quite standard. Despite the occassional use of logos and the signature green color profile, the site seems quite generic, despite the store's very unique selections. The current layout also fails to establish a hierarchy between galleries, making it difficult to focus on and navigate the two columns.</Desc>
           <Subhead>Accessibility</Subhead>
           <Desc>Low contrast text across carousel images and record listings make much of the information difficult, sometimes impossible to read. The website relies heavily on white, light gray and light green with small fonts, making it difficult to read the information at 100% zoom even with my near perfect vision.</Desc>
           <Desc>
