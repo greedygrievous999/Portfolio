@@ -72,11 +72,9 @@ const Project = () => {
         <InfoContainer>
           <Desc>
             To the left sits a rough sketch of a contemporary Coca-Cola vending machine, which can be found throughout college campuses. 
-            The machine features a small horizontal screen at the top. Below it lies a control panel, featuring a card reader, a set of 
-            control buttons (with a coin slot), and a dispensing window for the drinks inside. 
           </Desc>
           <Desc>
-            While in standby, the top dialogue reads 
+            While in standby, the top dialogue screen reads 
             "SELECT YOUR PURCHASE" while the card reader displays "SWIPE TO BEGIN."
           </Desc>
           <Desc>

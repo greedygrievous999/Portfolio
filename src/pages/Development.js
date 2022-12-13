@@ -17,6 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  align-items: center;
 `;
 
 const Image = styled.img`
@@ -81,7 +82,7 @@ const Project = () => {
           </Desc>
         </InfoContainer>
         <ImgContainer>
-          <Image src="https://i.imgur.com/7cp18fM.png"/>
+          <Image src="https://i.imgur.com/HfLW1u1_d.jpg?maxwidth=4000&shape=thumb&fidelity=high"/>
         </ImgContainer>
       </Wrapper>
       <Header>Functionality</Header>
@@ -91,26 +92,31 @@ const Project = () => {
             I initially designed my site to be full-stack enabled, fetching data from a MongoDB API. However, I ran into some issues
             and decided to pivot to strictly front-end functionality. To see the program in detail, you can check out the repository <a href="https://github.com/greedygrievous999/Development">here</a>. 
           </Desc>
-          <Desc>
+          <Header>
             Filtering and sorting:
-          </Desc>
+          </Header>
+          <Wrapper>
+            <ImgContainer>
+              <Image src="https://i.imgur.com/7cp18fM_d.jpg?maxwidth=4000&shape=thumb&fidelity=high"/>
+            </ImgContainer>
           <InfoContainer>
             <Desc>
-              I chose to filter by genre and size because they seemed the two most essential metrics for a given shopper. Genre is rather
-              self-explanatory as a factor. Size is relevant because not all record shoppers have turntables that can accommodate 10-inch records,
-              which require a 45rpm motor. 
+              I chose to filter by genre and size because they seemed the two most essential metrics for a given shopper. Not all record 
+              shoppers have turntables that can accommodate 10-inch records, which require a 45rpm motor, so size filtering seemed a good
+              addition to the site. 
             </Desc>
             <Desc>
-              Sorting is done by price (ascending or descending) or by newness, with newness (descending) set as the default.  
+              Users can sort by price (ascending or descending) or by newness, with newness (descending) set as the default.  
             </Desc>
             <Desc>
-              I generated filtering and sorting functionality by using State. The landing page filters by data from a json file, which contains
-              different data elements for different products in the shop. Products contain artist, title, price, genre, and size information. 
+              The landing page filters by data from a json file, which contains different data elements for different products in the shop.
+               Products contain artist, title, price, genre, and size information. 
             </Desc>
             <Desc>
-              Upon checking a certain filter in the interface, the landing page filters the displayed data accordingly. 
+              Upon checking a certain filter in the interface, the landing page uses state to filter the displayed data accordingly. 
             </Desc>
           </InfoContainer>
+          </Wrapper>
           <Header>
             Add to cart:
           </Header>
@@ -148,6 +154,9 @@ const Project = () => {
           </Desc>
           <Desc>
             I would also add a separate cart page that links from the cart icon on the landing page, along with search functionality. 
+          </Desc>
+          <Desc>
+            Once again, you can take a look at my site <a href="https://greedygrievous999.github.io/Development/">here</a>.
           </Desc>
         </InfoContainer>
       </Wrapper>

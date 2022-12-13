@@ -24,11 +24,15 @@ const Image = styled.img`
   max-height: 85%;
   max-width: 70%;
   object-fit: cover;
+  align-items: center;
+  justify-content: center;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0px 50px;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
@@ -96,8 +100,11 @@ const Project = () => {
           <Subhead>Memorability</Subhead>
           <Desc>The site's design is quite standard. Despite the occassional use of logos and the signature green color profile, the site seems quite generic, despite the store's very unique selections.</Desc>
           <Subhead>Accessibility</Subhead>
-          <Desc>Low contrast text across carousel images and record listings make much of the information difficult, sometimes impossible to read.  The website relies heavily on white and gray with small fonts, making it difficult to read the information at 100% zoom even with my near perfect vision.</Desc>
-          <Desc>The WAVE tool picked up 361 contrast errors across the site. </Desc>
+          <Desc>Low contrast text across carousel images and record listings make much of the information difficult, sometimes impossible to read. The website relies heavily on white, light gray and light green with small fonts, making it difficult to read the information at 100% zoom even with my near perfect vision.</Desc>
+          <Desc>
+            The <a href="</a>">Web Accessibility Evaluation Tool (WAVE)</a> picked up 361 contrast errors across the site, concentrated
+            largely in gallery sections which used light green text against a white background.  
+          </Desc>
         </InfoContainer>
       </Wrapper>
       <Header>My Process</Header>
@@ -144,11 +151,13 @@ const Project = () => {
       </Wrapper>
       <Wrapper>
         <ImgContainer>
-          <Image src="https://images.squarespace-cdn.com/content/v1/6353066141d1fa436529b061/54b2d31c-655a-4a29-8297-3d138c93a4b9/Screen+Shot+2022-10-21+at+6.15.40+PM.png?format=750w"/>
+          <iframe title="Figma Mockup" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FUCrgqorlF0bt2k324S5RjG%2FVisual-Style-Guide%3Fnode-id%3D3%253A56%26scaling%3Dcontain%26page-id%3D0%253A1%26starting-point-node-id%3D3%253A56" allowfullscreen="true"></iframe>
         </ImgContainer>
-        <ImgContainer>
-          <Image src="https://images.squarespace-cdn.com/content/v1/6353066141d1fa436529b061/8a50ff95-8550-4b3b-a3dd-bd4cd09efff1/Screen+Shot+2022-10-21+at+6.15.30+PM.png?format=750w"/>
-        </ImgContainer>
+        <InfoContainer>
+          <Desc>
+            You can try out my interactive Figma prototype on the left.
+          </Desc>
+        </InfoContainer>
       </Wrapper>
       <Wrapper>
         <InfoContainer>

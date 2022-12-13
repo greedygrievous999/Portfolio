@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import Footer from '../components/Footer';
-import {Routes, Route, useNavigate, Link} from 'react-router-dom'
-import Personas from './Personas'
+import { Link } from 'react-router-dom'
 
 const Container = styled.div`
 `
@@ -113,7 +112,10 @@ const Homepage = () => {
     return (
         <Container>
         <Introduction>
-            <Description>is a web designer based in Providence, Rhode Island. His work engages with this, and that, and this that so that he can do this that. Take a look at some of his projects below:</Description>
+            <Description>
+                is a web designer based in Providence, Rhode Island.  He aims to develop forward-thinking interfaces for users of
+                diverse, safer and more equitable internet. Take a look at some of his projects below:
+            </Description>
         </Introduction>
         <ProjectsContainer>
 

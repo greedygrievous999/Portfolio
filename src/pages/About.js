@@ -11,8 +11,12 @@ const Introduction = styled.div`
 `
 
 const Header = styled.h1`
-  font-weight: 200;
+  font-weight: 400;
 `;
+
+const Indent = styled.div`
+  margin-left: 30px;
+`
 
 const Desc = styled.p`
   margin: 20px 0px;
@@ -31,7 +35,7 @@ const Project = () => {
         <Desc>
             His design skills include: 
         </Desc>
-        <Introduction>
+        <Indent>
           <Desc>
             Prototype design for web and mobile
           </Desc>
@@ -41,9 +45,9 @@ const Project = () => {
           <Desc>
             HTML/CSS, React, Flutter, and MongoDB development
           </Desc>
-        </Introduction>
+        </Indent>
         <Desc>
-          You can contact him at greedy@greedygrievous999.co
+          You can contact him at greedy@greedygrievous999.com
         </Desc>
       </Introduction>
     <Footer></Footer>

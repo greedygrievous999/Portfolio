@@ -85,8 +85,16 @@ const Project = () => {
       <Header>Figma Mockup</Header>
       <Wrapper>
         <ImgContainer>
-          <iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBCnAbV3iPSP5MVIB2xK0eJ%2Fiterative%3Fnode-id%3D2%253A35%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A35" allowfullscreen></iframe>
+          <iframe title="Andi Prototype" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FBCnAbV3iPSP5MVIB2xK0eJ%2Fiterative%3Fnode-id%3D2%253A35%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A35" allowfullscreen="true"></iframe>
         </ImgContainer>
+      </Wrapper>
+      <Wrapper>
+        <InfoContainer>
+          <Desc>Our team arrived at the prototype above after submitting some initial prototypes to a critique group. These critiques included:</Desc>
+          <Desc>Addition of a bolded, simplified description of Andi on the “How it works” frame. This “TL:DR” text embodies Andi's ethos by giving a straightforward, quick answer to the frame's proposed question.</Desc>
+          <Desc>Addition of a caption to image and video results to help contextualize results.</Desc>
+          <Desc>A more consitent use of shadows to signify clickable elements.</Desc>
+        </InfoContainer>
       </Wrapper>
       <Header>User Testing</Header>
       <Wrapper>
@@ -161,6 +169,9 @@ const Project = () => {
           </Desc>
           <Desc>
             I'm super excited to see what the folks at <a href="https://www.ycombinator.com/companies/andi">Andi</a> do in the future!
+          </Desc>
+          <Desc>
+            You can read a more comprehensive report of the project on <a href="https://iterative-design.vercel.app/">our team's Vercel page</a>. 
           </Desc>
         </InfoContainer>
       </Wrapper>
