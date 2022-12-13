@@ -4,6 +4,9 @@ import Footer from '../components/Footer';
 import {Routes, Route, useNavigate, Link} from 'react-router-dom'
 import Personas from './Personas'
 
+const Container = styled.div`
+`
+
 const ProjectsContainer = styled.div`
     z-index: 2;
     padding: 20px;
@@ -20,13 +23,14 @@ const HoverAction = styled.div`
     top: 0;
     left: 0;
     background-color: rgba(0,0,0,0.8);
+    border-radius: 10%;
     z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease;
-    cursor: pointer;
+    transition: all .3s ease;
+    
 `
 const ImageContainer = styled.div`
     flex: 1;
@@ -36,7 +40,7 @@ const ImageContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: white;
     border: 1px;
     border-color: black;
     position: relative;
@@ -50,6 +54,7 @@ const Image = styled.img`
     min-width: 80%;
     max-width: 90%;
     z-index: 2;
+    border-radius: 10%;
 `
 const ReadMoreButton = styled.button`
     width: 30%;
@@ -63,7 +68,8 @@ const ReadMoreButton = styled.button`
     margin: 10px;
     border: 3px;
     border-color: coral;
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
     &:hover{
         background-color: lightcoral;
@@ -81,6 +87,7 @@ const TextInfo = styled.div`
     flex: wrap;
     margin: 5px;
     color: white;
+    max-width: 75%;
 `
 const Title = styled.span`
     font-weight: 400;
@@ -104,7 +111,7 @@ const Introduction = styled.div`
 
 const Homepage = () => {
     return (
-        <div>
+        <Container>
         <Introduction>
             <Description>is a web designer based in Providence, Rhode Island. His work engages with this, and that, and this that so that he can do this that. Take a look at some of his projects below:</Description>
         </Introduction>
@@ -120,7 +127,7 @@ const Homepage = () => {
                         <Description>User research project identifying different personas interacting with a vending machine interface</Description>
                     </TextInfo>
                     <ReadMoreButton>
-                    <Link to ="/personas" style={{ textDecoration: 'none', color: 'inherit'}}> 
+                    <Link to ="/personas" style={{ textDecoration: 'none', color: 'inherit'}} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}> 
                         READ MORE
                     </Link>
                     </ReadMoreButton>
@@ -131,13 +138,13 @@ const Homepage = () => {
                 <Image src="https://i.imgur.com/42c5wMz.png"/>
                 <HoverAction>     
                     <TextInfo>
-                        <Title>Responsive Redesign</Title>
+                        <Title>Record Shop Redesign</Title>
                     </TextInfo>
                     <TextInfo>
-                        <Description>Responsive, modernized front-end redesign for record shopping e-commerce page</Description>
+                        <Description>Modernized front-end redesign for record shopping e-commerce page</Description>
                     </TextInfo>
                     <ReadMoreButton>
-                    <Link to ="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>
+                    <Link to ="/responsive" style={{ textDecoration: 'none', color: 'inherit'}} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                         READ MORE
                     </Link>
                     </ReadMoreButton>
@@ -148,13 +155,13 @@ const Homepage = () => {
                 <Image src="https://i.imgur.com/FjZxLlw.png"/>
                 <HoverAction>     
                     <TextInfo>
-                        <Title>Iterative Design</Title>
+                        <Title>Mobile Search Design</Title>
                     </TextInfo>
                     <TextInfo>
                         <Description>Sequential interface design for AI-assisted search engine</Description>
                     </TextInfo>
                     <ReadMoreButton>
-                        <Link to ="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>
+                        <Link to ="/iterative" style={{ textDecoration: 'none', color: 'inherit'}} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                         READ MORE
                         </Link>
                     </ReadMoreButton>
@@ -165,13 +172,13 @@ const Homepage = () => {
                 <Image src="https://i.imgur.com/HfLW1u1.png"/>
                 <HoverAction>     
                     <TextInfo>
-                        <Title>Development</Title>
+                        <Title>E-Commerce Development</Title>
                     </TextInfo>
                     <TextInfo>
                         <Description>Front-end design for record shopping interface with sorting, filtering and cart functionality</Description>
                     </TextInfo>
                     <ReadMoreButton>
-                        <Link to ="/development" style={{ textDecoration: 'none', color: 'inherit'}}>
+                        <Link to ="/development" style={{ textDecoration: 'none', color: 'inherit'}} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
                         READ MORE
                         </Link>
                     </ReadMoreButton>
@@ -180,7 +187,7 @@ const Homepage = () => {
 
         </ProjectsContainer>
         <Footer/>
-        </div>
+        </Container>
     )
 }
 

@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Homepage from './pages/Homepage';
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -15,7 +15,7 @@ import Layout from './Layout';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
@@ -26,7 +26,7 @@ function App() {
           <Route path="about" element={<About/>} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

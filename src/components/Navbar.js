@@ -11,7 +11,7 @@ const Wrapper =  styled.div`
   padding: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 `
 const Left = styled.div`
   flex: 1;
@@ -27,11 +27,20 @@ const Right = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
+  
+  &:hover{
+    color: coral;
+    transform: scale(1.1);
+  }
 `
 const MenuItem = styled.li`
-  font-size: 14px;
+  font-size: 12px;
+  margin-right: 10px;
   cursor: pointer;
-  margin-left: 15px;
+
+  &:hover{
+    color: coral;
+  }
 `
 
 const Navbar = () => {
@@ -40,25 +49,15 @@ const Navbar = () => {
       <Wrapper>
         <Left>
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <Logo>Jackson Delea</Logo>
+              <Logo>GREEDY GRIEVOUS</Logo>
             </Link>
         </Left>
         <Right>
-          <Link to="/personas" style={{ textDecoration: 'none', color: 'inherit'}}>
-            <MenuItem>Personas</MenuItem>
-          </Link>
-          <Link to="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <MenuItem>Responsive Redesign</MenuItem>
-          </Link>
-          <Link to="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <MenuItem>Iterative Design</MenuItem>
-          </Link>
-          <Link to="/development" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <MenuItem>Development</MenuItem>
-          </Link>
-          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>
-              <MenuItem>About</MenuItem>
-          </Link>
+            <MenuItem><Link to="/personas" style={{ textDecoration: 'none', color: 'inherit'}}>Personas</Link></MenuItem>
+            <MenuItem><Link to="/responsive" style={{ textDecoration: 'none', color: 'inherit'}}>Record Shop Redesign</Link></MenuItem>
+            <MenuItem><Link to="/iterative" style={{ textDecoration: 'none', color: 'inherit'}}>Mobile Search Design</Link></MenuItem>
+            <MenuItem><Link to="/development" style={{ textDecoration: 'none', color: 'inherit'}}>E-Commerce Development</Link></MenuItem>
+            <MenuItem><Link to="/about" style={{ textDecoration: 'none', color: 'inherit'}}>About</Link></MenuItem>     
         </Right>
       </Wrapper>
     </Container>

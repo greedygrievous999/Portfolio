@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     text-align: center;
-
     padding: 30px;
+    cursor: pointer;
 `
 const Column = styled.div`
     flex: 1;
@@ -17,6 +17,9 @@ const Logo = styled.h1``
 
 const Desc = styled.p`
     margin: 20px 0px;
+    &:hover{
+    color: coral;
+  }
 `
 const Link = styled.p`
     margin: 5px 0px;
@@ -51,7 +54,7 @@ const Right = styled.div`
 const Footer = () => {
   return (
     <Container> 
-        Built on React
+        <Desc onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>Back to top</Desc>
     </Container>
   )
 }

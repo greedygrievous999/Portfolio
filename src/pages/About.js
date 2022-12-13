@@ -25,11 +25,25 @@ const Project = () => {
       <Introduction>
         <Header>About</Header>
         <Desc>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-            iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-            tristique tortor pretium ut. Curabitur elit justo, consequat id
-            condimentum ac, volutpat ornare.
+            Greedy grievous is a web designer based in Providence, Rhode Island. He aims to develop forward-thinking interfaces for users of
+            diverse, safer and more equitable internet. 
+        </Desc>
+        <Desc>
+            His design skills include: 
+        </Desc>
+        <Introduction>
+          <Desc>
+            Prototype design for web and mobile
+          </Desc>
+          <Desc>
+            User testing and statistical analysis 
+          </Desc>
+          <Desc>
+            HTML/CSS, React, Flutter, and MongoDB development
+          </Desc>
+        </Introduction>
+        <Desc>
+          You can contact him at greedy@greedygrievous999.co
         </Desc>
       </Introduction>
     <Footer></Footer>
